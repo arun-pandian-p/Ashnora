@@ -1,0 +1,54 @@
+appId: com.ashnora.desktop
+productName: Ashnora
+copyright: Copyright © 2026 Ashnora Inc.
+electronVersion: 44.5.1
+
+directories:
+  output: release
+  buildResources: build
+
+publish:
+  provider: github
+  owner: arun-pandian-p
+  repo: Ashnora
+  releaseType: release
+
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - build/icons/ashnora.ico
+  - build/icon.ico
+  - build/icon.png
+  - package.json
+  - "!**/*.map"
+  - "!**/*.ts"
+  - "!**/*.md"
+
+extraMetadata:
+  main: dist-electron/main.js
+
+win:
+  icon: build/icons/ashnora.ico
+  executableName: Ashnora
+  artifactName: ${productName}-${version}-Setup.${ext}
+  target:
+    - target: dir
+      arch:
+        - x64
+    - target: nsis
+      arch:
+        - x64
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  installerIcon: build/icons/ashnora.ico
+  uninstallerIcon: build/icons/ashnora.ico
+  installerHeaderIcon: build/icons/ashnora.ico
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  shortcutName: Ashnora Restaurant OS
+  uninstallDisplayName: Ashnora Restaurant OS
+  deleteAppDataOnUninstall: false

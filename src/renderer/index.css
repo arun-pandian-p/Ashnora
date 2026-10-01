@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 33 100% 97.5%; /* #FFF8F1 - Off-white warm background */
+    --foreground: 222 47% 11%;   /* #0F172A - Dark navy text */
+    --card: 0 0% 100%;           /* #FFFFFF - Pure white card */
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 24.6 95% 53.1%;   /* #F97316 - Warm vibrant orange */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 57% 14%;    /* #0B1F3A - Brand navy */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 215 20% 65%;
+    --muted-foreground: 215 19% 35%; /* #475569 - Muted text */
+    --accent: 33 100% 96%;
+    --accent-foreground: 24.6 95% 53.1%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;       /* #E2E8F0 */
+    --input: 214 32% 91%;
+    --ring: 24.6 95% 53.1%;
+    --radius: 1rem;
+  }
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #FFF8F1;
+  color: #0F172A;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Custom scrollbars matching Ashnora palette */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}

@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build & Packaging outputs
+dist/
+dist-electron/
+release/
+out/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Certificates (never commit private keys)
+*.pfx
+*.p12
+*.key
+*.pem
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
